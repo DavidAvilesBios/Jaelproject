@@ -1,0 +1,1056 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="adMarissa_Bios_no_le_pModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="admAgentes">
+          <Key>
+            <PropertyRef Name="CIDAGENTE" />
+          </Key>
+          <Property Name="CIDAGENTE" Type="int" Nullable="false" />
+          <Property Name="CCODIGOAGENTE" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CNOMBREAGENTE" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="CFECHAALTAAGENTE" Type="datetime" Nullable="false" />
+          <Property Name="CTIPOAGENTE" Type="int" Nullable="false" />
+          <Property Name="CCOMISIONVENTAAGENTE" Type="float" Nullable="false" />
+          <Property Name="CCOMISIONCOBROAGENTE" Type="float" Nullable="false" />
+          <Property Name="CIDCLIENTE" Type="int" Nullable="false" />
+          <Property Name="CIDPROVEEDOR" Type="int" Nullable="false" />
+          <Property Name="CIDVALORCLASIFICACION1" Type="int" Nullable="false" />
+          <Property Name="CIDVALORCLASIFICACION2" Type="int" Nullable="false" />
+          <Property Name="CIDVALORCLASIFICACION3" Type="int" Nullable="false" />
+          <Property Name="CIDVALORCLASIFICACION4" Type="int" Nullable="false" />
+          <Property Name="CIDVALORCLASIFICACION5" Type="int" Nullable="false" />
+          <Property Name="CIDVALORCLASIFICACION6" Type="int" Nullable="false" />
+          <Property Name="CSEGCONTAGENTE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CTEXTOEXTRA1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CTEXTOEXTRA2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CTEXTOEXTRA3" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CFECHAEXTRA" Type="datetime" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA1" Type="float" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA2" Type="float" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA3" Type="float" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA4" Type="float" Nullable="false" />
+          <Property Name="CTIMESTAMP" Type="varchar" MaxLength="23" Nullable="false" />
+          <Property Name="CSCAGENTE2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CSCAGENTE3" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="admConceptos">
+          <Key>
+            <PropertyRef Name="CIDCONCEPTODOCUMENTO" />
+          </Key>
+          <Property Name="CIDCONCEPTODOCUMENTO" Type="int" Nullable="false" />
+          <Property Name="CCODIGOCONCEPTO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CNOMBRECONCEPTO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="CIDDOCUMENTODE" Type="int" Nullable="false" />
+          <Property Name="CNATURALEZA" Type="int" Nullable="false" />
+          <Property Name="CDOCTOACREDITO" Type="int" Nullable="false" />
+          <Property Name="CTIPOFOLIO" Type="int" Nullable="false" />
+          <Property Name="CMAXIMOMOVTOS" Type="int" Nullable="false" />
+          <Property Name="CCREACLIENTE" Type="int" Nullable="false" />
+          <Property Name="CSUMARPROMOCIONES" Type="int" Nullable="false" />
+          <Property Name="CFORMAPREIMPRESA" Type="varchar" MaxLength="253" Nullable="false" />
+          <Property Name="CORDENCALCULO" Type="int" Nullable="false" />
+          <Property Name="CUSANOMBRECTEPROV" Type="int" Nullable="false" />
+          <Property Name="CUSARFC" Type="int" Nullable="false" />
+          <Property Name="CUSAFECHAVENCIMIENTO" Type="int" Nullable="false" />
+          <Property Name="CUSAFECHAENTREGARECEPCION" Type="int" Nullable="false" />
+          <Property Name="CUSAMONEDA" Type="int" Nullable="false" />
+          <Property Name="CUSATIPOCAMBIO" Type="int" Nullable="false" />
+          <Property Name="CUSACODIGOAGENTE" Type="int" Nullable="false" />
+          <Property Name="CUSANOMBREAGENTE" Type="int" Nullable="false" />
+          <Property Name="CUSADIRECCION" Type="int" Nullable="false" />
+          <Property Name="CUSAREFERENCIA" Type="int" Nullable="false" />
+          <Property Name="CSERIEPOROMISION" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="CANCHOCODIGOPRODUCTO" Type="int" Nullable="false" />
+          <Property Name="CUSANOMBREPRODUCTO" Type="int" Nullable="false" />
+          <Property Name="CANCHONOMBREPRODUCTO" Type="int" Nullable="false" />
+          <Property Name="CUSAALMACEN" Type="int" Nullable="false" />
+          <Property Name="CANCHOCODIGOALMACEN" Type="int" Nullable="false" />
+          <Property Name="CANCHOIMPORTES" Type="int" Nullable="false" />
+          <Property Name="CANCHOPORCENTAJES" Type="int" Nullable="false" />
+          <Property Name="CANCHOUNIDADPESOMEDIDA" Type="int" Nullable="false" />
+          <Property Name="CUSAPRECIO" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAPRECIO" Type="int" Nullable="false" />
+          <Property Name="CUSACOSTOCAPTURADO" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULACOSTOCAPTURADO" Type="int" Nullable="false" />
+          <Property Name="CUSAEXISTENCIA" Type="int" Nullable="false" />
+          <Property Name="CUSANETO" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULANETO" Type="int" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEIMPUESTO1" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAPORCIMPUESTO1" Type="int" Nullable="false" />
+          <Property Name="CUSAIMPUESTO1" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAIMPUESTO1" Type="int" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEIMPUESTO2" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAPORCIMPUESTO2" Type="int" Nullable="false" />
+          <Property Name="CUSAIMPUESTO2" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAIMPUESTO2" Type="int" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEIMPUESTO3" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAPORCIMPUESTO3" Type="int" Nullable="false" />
+          <Property Name="CUSAIMPUESTO3" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAIMPUESTO3" Type="int" Nullable="false" />
+          <Property Name="CUSAPORCENTAJERETENCION1" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAPORCRETENCION1" Type="int" Nullable="false" />
+          <Property Name="CUSARETENCION1" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULARETENCION1" Type="int" Nullable="false" />
+          <Property Name="CUSAPORCENTAJERETENCION2" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAPORCRETENCION2" Type="int" Nullable="false" />
+          <Property Name="CUSARETENCION2" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULARETENCION2" Type="int" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEDESCUENTO1" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAPORCDESCUENTO1" Type="int" Nullable="false" />
+          <Property Name="CUSADESCUENTO1" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULADESCUENTO1" Type="int" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEDESCUENTO2" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAPORCDESCUENTO2" Type="int" Nullable="false" />
+          <Property Name="CUSADESCUENTO2" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULADESCUENTO2" Type="int" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEDESCUENTO3" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAPORCDESCUENTO3" Type="int" Nullable="false" />
+          <Property Name="CUSADESCUENTO3" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULADESCUENTO3" Type="int" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEDESCUENTO4" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAPORCDESCUENTO4" Type="int" Nullable="false" />
+          <Property Name="CUSADESCUENTO4" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULADESCUENTO4" Type="int" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEDESCUENTO5" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAPORCDESCUENTO5" Type="int" Nullable="false" />
+          <Property Name="CUSADESCUENTO5" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULADESCUENTO5" Type="int" Nullable="false" />
+          <Property Name="CUSATOTAL" Type="int" Nullable="false" />
+          <Property Name="CANCHOREFERENCIA" Type="int" Nullable="false" />
+          <Property Name="CUSACLASIFICACIONMOVTO" Type="int" Nullable="false" />
+          <Property Name="CANCHOVALORCLASIFICACION" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULATOTAL" Type="int" Nullable="false" />
+          <Property Name="CUSADESCUENTODOC1" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULADESDOC1" Type="int" Nullable="false" />
+          <Property Name="CUSADESCUENTODOC2" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULADESDOC2" Type="int" Nullable="false" />
+          <Property Name="CUSAGASTO1" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAGASTO1" Type="int" Nullable="false" />
+          <Property Name="CUSAGASTO2" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAGASTO2" Type="int" Nullable="false" />
+          <Property Name="CUSAGASTO3" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAGASTO3" Type="int" Nullable="false" />
+          <Property Name="CUSATEXTOEXTRA1" Type="int" Nullable="false" />
+          <Property Name="CUSATEXTOEXTRA2" Type="int" Nullable="false" />
+          <Property Name="CUSATEXTOEXTRA3" Type="int" Nullable="false" />
+          <Property Name="CANCHOTEXTOEXTRA" Type="int" Nullable="false" />
+          <Property Name="CUSAFECHAEXTRA" Type="int" Nullable="false" />
+          <Property Name="CANCHOFECHAEXTRA" Type="int" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA1" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAEXTRA1" Type="int" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA2" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAEXTRA2" Type="int" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA3" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAEXTRA3" Type="int" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA4" Type="int" Nullable="false" />
+          <Property Name="CIDFORMULAEXTRA4" Type="int" Nullable="false" />
+          <Property Name="CUSATEXTOEXTRA1DOC" Type="int" Nullable="false" />
+          <Property Name="CUSATEXTOEXTRA2DOC" Type="int" Nullable="false" />
+          <Property Name="CUSATEXTOEXTRA3DOC" Type="int" Nullable="false" />
+          <Property Name="CUSAFECHAEXTRADOC" Type="int" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA1DOC" Type="int" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA2DOC" Type="int" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA3DOC" Type="int" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA4DOC" Type="int" Nullable="false" />
+          <Property Name="CUSAEXTRACOMOGASTO" Type="int" Nullable="false" />
+          <Property Name="CUSAOBSERVACIONES" Type="int" Nullable="false" />
+          <Property Name="CPRESENTAFISCAL" Type="int" Nullable="false" />
+          <Property Name="CPRESENTAREFERENCIA" Type="int" Nullable="false" />
+          <Property Name="CPRESENTACONDICIONES" Type="int" Nullable="false" />
+          <Property Name="CPRESENTAENVIO" Type="int" Nullable="false" />
+          <Property Name="CPRESENTADETALLE" Type="int" Nullable="false" />
+          <Property Name="CPRESENTAIMPRIMIR" Type="int" Nullable="false" />
+          <Property Name="CPRESENTAPAGAR" Type="int" Nullable="false" />
+          <Property Name="CPRESENTASALDAR" Type="int" Nullable="false" />
+          <Property Name="CPRESENTADOCUMENTAR" Type="int" Nullable="false" />
+          <Property Name="CPRESENTAGASTOSCOMPRA" Type="int" Nullable="false" />
+          <Property Name="CSEGCONTCONCEPTO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CBANENCABEZADO" Type="int" Nullable="false" />
+          <Property Name="CBANMOVIMIENTO" Type="int" Nullable="false" />
+          <Property Name="CBANDESCUENTO" Type="int" Nullable="false" />
+          <Property Name="CBANIMPUESTO" Type="int" Nullable="false" />
+          <Property Name="CBANACCIONAUTOMATICA" Type="int" Nullable="false" />
+          <Property Name="CTIMESTAMP" Type="varchar" MaxLength="23" Nullable="false" />
+          <Property Name="CNOFOLIO" Type="float" Nullable="false" />
+          <Property Name="CIDPROCESOSEGURIDAD" Type="int" Nullable="false" />
+          <Property Name="CUSAGTOMOV" Type="int" Nullable="false" />
+          <Property Name="CUSASCMOV" Type="int" Nullable="false" />
+          <Property Name="CIDASTOCON" Type="int" Nullable="false" />
+          <Property Name="CSCCPTO2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CSCCPTO3" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CSCMOVTO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CIDCONAUTO" Type="int" Nullable="false" />
+          <Property Name="CIDALMASUM" Type="int" Nullable="false" />
+          <Property Name="CUSACOMVTA" Type="int" Nullable="false" />
+          <Property Name="CIDPRSEG02" Type="int" Nullable="false" />
+          <Property Name="CIDPRSEG03" Type="int" Nullable="false" />
+          <Property Name="CIDPRSEG04" Type="int" Nullable="false" />
+          <Property Name="CIDPRSEG05" Type="int" Nullable="false" />
+          <Property Name="CFORMAAJ01" Type="int" Nullable="false" />
+          <Property Name="CIDPRSEG06" Type="int" Nullable="false" />
+          <Property Name="CAPFORMULA" Type="int" Nullable="false" />
+          <Property Name="CESCFD" Type="int" Nullable="false" />
+          <Property Name="CIDFIRMARL" Type="int" Nullable="false" />
+          <Property Name="CGDAPASSW" Type="int" Nullable="false" />
+          <Property Name="CEMITEYENT" Type="int" Nullable="false" />
+          <Property Name="CBANCFD" Type="int" Nullable="false" />
+          <Property Name="CREPIMPCFD" Type="varchar" MaxLength="253" Nullable="false" />
+          <Property Name="CIDDIRSUCU" Type="int" Nullable="false" />
+          <Property Name="CBANDIRSUC" Type="int" Nullable="false" />
+          <Property Name="CVERFACELE" Type="int" Nullable="false" />
+          <Property Name="CCALFECHAS" Type="int" Nullable="false" />
+          <Property Name="CTIPCAMTR1" Type="int" Nullable="false" />
+          <Property Name="CTIPCAMTR2" Type="int" Nullable="false" />
+          <Property Name="CCONSOLIDA" Type="int" Nullable="false" />
+          <Property Name="CENVIODIG" Type="int" Nullable="false" />
+          <Property Name="CBANTRANS" Type="int" Nullable="false" />
+          <Property Name="CCONFNOAPR" Type="int" Nullable="false" />
+          <Property Name="CNOAPROB" Type="int" Nullable="false" />
+          <Property Name="CAUTOIMPR" Type="int" Nullable="false" />
+          <Property Name="CRECIBECFD" Type="int" Nullable="false" />
+          <Property Name="CSISTORIG" Type="int" Nullable="false" />
+          <Property Name="CIDCPTODE1" Type="int" Nullable="false" />
+          <Property Name="CIDCPTODE2" Type="int" Nullable="false" />
+          <Property Name="CIDCPTODE3" Type="int" Nullable="false" />
+          <Property Name="CPLAMIGCFD" Type="varchar" MaxLength="253" Nullable="false" />
+          <Property Name="CIDPRSEG07" Type="int" Nullable="false" />
+          <Property Name="CRESERVADO" Type="int" Nullable="false" />
+          <Property Name="CVERREFER" Type="int" Nullable="false" />
+          <Property Name="CVERDOCORI" Type="int" Nullable="false" />
+          <Property Name="CCBB" Type="int" Nullable="false" />
+          <Property Name="CCARTAPOR" Type="int" Nullable="false" />
+          <Property Name="CCOMPDONAT" Type="int" Nullable="false" />
+          <Property Name="COBSXML" Type="int" Nullable="false" />
+          <Property Name="CRUTAENTREGA" Type="varchar" MaxLength="253" Nullable="false" />
+          <Property Name="CPREFIJOCONCEPTO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CREGIMFISC" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CCOMPEDUCA" Type="int" Nullable="false" />
+          <Property Name="CMETODOPAG" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CVERESQUE" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="CIDFIRMADSL" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="CORDENCAPTURA" Type="varchar" MaxLength="52" Nullable="false" />
+          <Property Name="CESTATUS" Type="int" Nullable="false" />
+          <Property Name="CIDMONEDA" Type="int" Nullable="false" />
+          <Property Name="CIDCUENTA" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="admDocumentos">
+          <Key>
+            <PropertyRef Name="CIDDOCUMENTO" />
+          </Key>
+          <Property Name="CIDDOCUMENTO" Type="int" Nullable="false" />
+          <Property Name="CIDDOCUMENTODE" Type="int" Nullable="false" />
+          <Property Name="CIDCONCEPTODOCUMENTO" Type="int" Nullable="false" />
+          <Property Name="CSERIEDOCUMENTO" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="CFOLIO" Type="float" Nullable="false" />
+          <Property Name="CFECHA" Type="datetime" Nullable="false" />
+          <Property Name="CIDCLIENTEPROVEEDOR" Type="int" Nullable="false" />
+          <Property Name="CRAZONSOCIAL" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="CRFC" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CIDAGENTE" Type="int" Nullable="false" />
+          <Property Name="CFECHAVENCIMIENTO" Type="datetime" Nullable="false" />
+          <Property Name="CFECHAPRONTOPAGO" Type="datetime" Nullable="false" />
+          <Property Name="CFECHAENTREGARECEPCION" Type="datetime" Nullable="false" />
+          <Property Name="CFECHAULTIMOINTERES" Type="datetime" Nullable="false" />
+          <Property Name="CIDMONEDA" Type="int" Nullable="false" />
+          <Property Name="CTIPOCAMBIO" Type="float" Nullable="false" />
+          <Property Name="CREFERENCIA" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="COBSERVACIONES" Type="text" />
+          <Property Name="CNATURALEZA" Type="int" Nullable="false" />
+          <Property Name="CIDDOCUMENTOORIGEN" Type="int" Nullable="false" />
+          <Property Name="CPLANTILLA" Type="int" Nullable="false" />
+          <Property Name="CUSACLIENTE" Type="int" Nullable="false" />
+          <Property Name="CUSAPROVEEDOR" Type="int" Nullable="false" />
+          <Property Name="CAFECTADO" Type="int" Nullable="false" />
+          <Property Name="CIMPRESO" Type="int" Nullable="false" />
+          <Property Name="CCANCELADO" Type="int" Nullable="false" />
+          <Property Name="CDEVUELTO" Type="int" Nullable="false" />
+          <Property Name="CIDPREPOLIZA" Type="int" Nullable="false" />
+          <Property Name="CIDPREPOLIZACANCELACION" Type="int" Nullable="false" />
+          <Property Name="CESTADOCONTABLE" Type="int" Nullable="false" />
+          <Property Name="CNETO" Type="float" Nullable="false" />
+          <Property Name="CIMPUESTO1" Type="float" Nullable="false" />
+          <Property Name="CIMPUESTO2" Type="float" Nullable="false" />
+          <Property Name="CIMPUESTO3" Type="float" Nullable="false" />
+          <Property Name="CRETENCION1" Type="float" Nullable="false" />
+          <Property Name="CRETENCION2" Type="float" Nullable="false" />
+          <Property Name="CDESCUENTOMOV" Type="float" Nullable="false" />
+          <Property Name="CDESCUENTODOC1" Type="float" Nullable="false" />
+          <Property Name="CDESCUENTODOC2" Type="float" Nullable="false" />
+          <Property Name="CGASTO1" Type="float" Nullable="false" />
+          <Property Name="CGASTO2" Type="float" Nullable="false" />
+          <Property Name="CGASTO3" Type="float" Nullable="false" />
+          <Property Name="CTOTAL" Type="float" Nullable="false" />
+          <Property Name="CPENDIENTE" Type="float" Nullable="false" />
+          <Property Name="CTOTALUNIDADES" Type="float" Nullable="false" />
+          <Property Name="CDESCUENTOPRONTOPAGO" Type="float" Nullable="false" />
+          <Property Name="CPORCENTAJEIMPUESTO1" Type="float" Nullable="false" />
+          <Property Name="CPORCENTAJEIMPUESTO2" Type="float" Nullable="false" />
+          <Property Name="CPORCENTAJEIMPUESTO3" Type="float" Nullable="false" />
+          <Property Name="CPORCENTAJERETENCION1" Type="float" Nullable="false" />
+          <Property Name="CPORCENTAJERETENCION2" Type="float" Nullable="false" />
+          <Property Name="CPORCENTAJEINTERES" Type="float" Nullable="false" />
+          <Property Name="CTEXTOEXTRA1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CTEXTOEXTRA2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CTEXTOEXTRA3" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CFECHAEXTRA" Type="datetime" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA1" Type="float" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA2" Type="float" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA3" Type="float" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA4" Type="float" Nullable="false" />
+          <Property Name="CDESTINATARIO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="CNUMEROGUIA" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="CMENSAJERIA" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CCUENTAMENSAJERIA" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="CNUMEROCAJAS" Type="float" Nullable="false" />
+          <Property Name="CPESO" Type="float" Nullable="false" />
+          <Property Name="CBANOBSERVACIONES" Type="int" Nullable="false" />
+          <Property Name="CBANDATOSENVIO" Type="int" Nullable="false" />
+          <Property Name="CBANCONDICIONESCREDITO" Type="int" Nullable="false" />
+          <Property Name="CBANGASTOS" Type="int" Nullable="false" />
+          <Property Name="CUNIDADESPENDIENTES" Type="float" Nullable="false" />
+          <Property Name="CTIMESTAMP" Type="varchar" MaxLength="23" Nullable="false" />
+          <Property Name="CIMPCHEQPAQ" Type="float" Nullable="false" />
+          <Property Name="CSISTORIG" Type="int" Nullable="false" />
+          <Property Name="CIDMONEDCA" Type="int" Nullable="false" />
+          <Property Name="CTIPOCAMCA" Type="float" Nullable="false" />
+          <Property Name="CESCFD" Type="int" Nullable="false" />
+          <Property Name="CTIENECFD" Type="int" Nullable="false" />
+          <Property Name="CLUGAREXPE" Type="varchar" MaxLength="380" Nullable="false" />
+          <Property Name="CMETODOPAG" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CNUMPARCIA" Type="int" Nullable="false" />
+          <Property Name="CCANTPARCI" Type="int" Nullable="false" />
+          <Property Name="CCONDIPAGO" Type="varchar" MaxLength="253" Nullable="false" />
+          <Property Name="CNUMCTAPAG" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CGUIDDOCUMENTO" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="CUSUARIO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="CIDPROYECTO" Type="int" Nullable="false" />
+          <Property Name="CIDCUENTA" Type="int" Nullable="false" />
+          <Property Name="CTRANSACTIONID" Type="varchar" MaxLength="26" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TablaUsuario">
+          <Key>
+            <PropertyRef Name="CIDDOCUMENTO" />
+          </Key>
+          <Property Name="CIDDOCUMENTO" Type="int" Nullable="false" />
+          <Property Name="CUSUARIO" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="adMarissa_Bios_no_le_pModelStoreContainer">
+          <EntitySet Name="admAgentes" EntityType="Self.admAgentes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="admConceptos" EntityType="Self.admConceptos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="admDocumentos" EntityType="Self.admDocumentos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TablaUsuario" EntityType="Self.TablaUsuario" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="adMarissa_Bios_no_le_pModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="admAgente">
+          <Key>
+            <PropertyRef Name="CIDAGENTE" />
+          </Key>
+          <Property Name="CIDAGENTE" Type="Int32" Nullable="false" />
+          <Property Name="CCODIGOAGENTE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CNOMBREAGENTE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CFECHAALTAAGENTE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CTIPOAGENTE" Type="Int32" Nullable="false" />
+          <Property Name="CCOMISIONVENTAAGENTE" Type="Double" Nullable="false" />
+          <Property Name="CCOMISIONCOBROAGENTE" Type="Double" Nullable="false" />
+          <Property Name="CIDCLIENTE" Type="Int32" Nullable="false" />
+          <Property Name="CIDPROVEEDOR" Type="Int32" Nullable="false" />
+          <Property Name="CIDVALORCLASIFICACION1" Type="Int32" Nullable="false" />
+          <Property Name="CIDVALORCLASIFICACION2" Type="Int32" Nullable="false" />
+          <Property Name="CIDVALORCLASIFICACION3" Type="Int32" Nullable="false" />
+          <Property Name="CIDVALORCLASIFICACION4" Type="Int32" Nullable="false" />
+          <Property Name="CIDVALORCLASIFICACION5" Type="Int32" Nullable="false" />
+          <Property Name="CIDVALORCLASIFICACION6" Type="Int32" Nullable="false" />
+          <Property Name="CSEGCONTAGENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CTEXTOEXTRA1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CTEXTOEXTRA2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CTEXTOEXTRA3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CFECHAEXTRA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CIMPORTEEXTRA1" Type="Double" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA2" Type="Double" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA3" Type="Double" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA4" Type="Double" Nullable="false" />
+          <Property Name="CTIMESTAMP" Type="String" MaxLength="23" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CSCAGENTE2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CSCAGENTE3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="admConcepto">
+          <Key>
+            <PropertyRef Name="CIDCONCEPTODOCUMENTO" />
+          </Key>
+          <Property Name="CIDCONCEPTODOCUMENTO" Type="Int32" Nullable="false" />
+          <Property Name="CCODIGOCONCEPTO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CNOMBRECONCEPTO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CIDDOCUMENTODE" Type="Int32" Nullable="false" />
+          <Property Name="CNATURALEZA" Type="Int32" Nullable="false" />
+          <Property Name="CDOCTOACREDITO" Type="Int32" Nullable="false" />
+          <Property Name="CTIPOFOLIO" Type="Int32" Nullable="false" />
+          <Property Name="CMAXIMOMOVTOS" Type="Int32" Nullable="false" />
+          <Property Name="CCREACLIENTE" Type="Int32" Nullable="false" />
+          <Property Name="CSUMARPROMOCIONES" Type="Int32" Nullable="false" />
+          <Property Name="CFORMAPREIMPRESA" Type="String" MaxLength="253" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CORDENCALCULO" Type="Int32" Nullable="false" />
+          <Property Name="CUSANOMBRECTEPROV" Type="Int32" Nullable="false" />
+          <Property Name="CUSARFC" Type="Int32" Nullable="false" />
+          <Property Name="CUSAFECHAVENCIMIENTO" Type="Int32" Nullable="false" />
+          <Property Name="CUSAFECHAENTREGARECEPCION" Type="Int32" Nullable="false" />
+          <Property Name="CUSAMONEDA" Type="Int32" Nullable="false" />
+          <Property Name="CUSATIPOCAMBIO" Type="Int32" Nullable="false" />
+          <Property Name="CUSACODIGOAGENTE" Type="Int32" Nullable="false" />
+          <Property Name="CUSANOMBREAGENTE" Type="Int32" Nullable="false" />
+          <Property Name="CUSADIRECCION" Type="Int32" Nullable="false" />
+          <Property Name="CUSAREFERENCIA" Type="Int32" Nullable="false" />
+          <Property Name="CSERIEPOROMISION" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CANCHOCODIGOPRODUCTO" Type="Int32" Nullable="false" />
+          <Property Name="CUSANOMBREPRODUCTO" Type="Int32" Nullable="false" />
+          <Property Name="CANCHONOMBREPRODUCTO" Type="Int32" Nullable="false" />
+          <Property Name="CUSAALMACEN" Type="Int32" Nullable="false" />
+          <Property Name="CANCHOCODIGOALMACEN" Type="Int32" Nullable="false" />
+          <Property Name="CANCHOIMPORTES" Type="Int32" Nullable="false" />
+          <Property Name="CANCHOPORCENTAJES" Type="Int32" Nullable="false" />
+          <Property Name="CANCHOUNIDADPESOMEDIDA" Type="Int32" Nullable="false" />
+          <Property Name="CUSAPRECIO" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAPRECIO" Type="Int32" Nullable="false" />
+          <Property Name="CUSACOSTOCAPTURADO" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULACOSTOCAPTURADO" Type="Int32" Nullable="false" />
+          <Property Name="CUSAEXISTENCIA" Type="Int32" Nullable="false" />
+          <Property Name="CUSANETO" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULANETO" Type="Int32" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEIMPUESTO1" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAPORCIMPUESTO1" Type="Int32" Nullable="false" />
+          <Property Name="CUSAIMPUESTO1" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAIMPUESTO1" Type="Int32" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEIMPUESTO2" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAPORCIMPUESTO2" Type="Int32" Nullable="false" />
+          <Property Name="CUSAIMPUESTO2" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAIMPUESTO2" Type="Int32" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEIMPUESTO3" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAPORCIMPUESTO3" Type="Int32" Nullable="false" />
+          <Property Name="CUSAIMPUESTO3" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAIMPUESTO3" Type="Int32" Nullable="false" />
+          <Property Name="CUSAPORCENTAJERETENCION1" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAPORCRETENCION1" Type="Int32" Nullable="false" />
+          <Property Name="CUSARETENCION1" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULARETENCION1" Type="Int32" Nullable="false" />
+          <Property Name="CUSAPORCENTAJERETENCION2" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAPORCRETENCION2" Type="Int32" Nullable="false" />
+          <Property Name="CUSARETENCION2" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULARETENCION2" Type="Int32" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEDESCUENTO1" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAPORCDESCUENTO1" Type="Int32" Nullable="false" />
+          <Property Name="CUSADESCUENTO1" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULADESCUENTO1" Type="Int32" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEDESCUENTO2" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAPORCDESCUENTO2" Type="Int32" Nullable="false" />
+          <Property Name="CUSADESCUENTO2" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULADESCUENTO2" Type="Int32" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEDESCUENTO3" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAPORCDESCUENTO3" Type="Int32" Nullable="false" />
+          <Property Name="CUSADESCUENTO3" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULADESCUENTO3" Type="Int32" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEDESCUENTO4" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAPORCDESCUENTO4" Type="Int32" Nullable="false" />
+          <Property Name="CUSADESCUENTO4" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULADESCUENTO4" Type="Int32" Nullable="false" />
+          <Property Name="CUSAPORCENTAJEDESCUENTO5" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAPORCDESCUENTO5" Type="Int32" Nullable="false" />
+          <Property Name="CUSADESCUENTO5" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULADESCUENTO5" Type="Int32" Nullable="false" />
+          <Property Name="CUSATOTAL" Type="Int32" Nullable="false" />
+          <Property Name="CANCHOREFERENCIA" Type="Int32" Nullable="false" />
+          <Property Name="CUSACLASIFICACIONMOVTO" Type="Int32" Nullable="false" />
+          <Property Name="CANCHOVALORCLASIFICACION" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULATOTAL" Type="Int32" Nullable="false" />
+          <Property Name="CUSADESCUENTODOC1" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULADESDOC1" Type="Int32" Nullable="false" />
+          <Property Name="CUSADESCUENTODOC2" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULADESDOC2" Type="Int32" Nullable="false" />
+          <Property Name="CUSAGASTO1" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAGASTO1" Type="Int32" Nullable="false" />
+          <Property Name="CUSAGASTO2" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAGASTO2" Type="Int32" Nullable="false" />
+          <Property Name="CUSAGASTO3" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAGASTO3" Type="Int32" Nullable="false" />
+          <Property Name="CUSATEXTOEXTRA1" Type="Int32" Nullable="false" />
+          <Property Name="CUSATEXTOEXTRA2" Type="Int32" Nullable="false" />
+          <Property Name="CUSATEXTOEXTRA3" Type="Int32" Nullable="false" />
+          <Property Name="CANCHOTEXTOEXTRA" Type="Int32" Nullable="false" />
+          <Property Name="CUSAFECHAEXTRA" Type="Int32" Nullable="false" />
+          <Property Name="CANCHOFECHAEXTRA" Type="Int32" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA1" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAEXTRA1" Type="Int32" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA2" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAEXTRA2" Type="Int32" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA3" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAEXTRA3" Type="Int32" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA4" Type="Int32" Nullable="false" />
+          <Property Name="CIDFORMULAEXTRA4" Type="Int32" Nullable="false" />
+          <Property Name="CUSATEXTOEXTRA1DOC" Type="Int32" Nullable="false" />
+          <Property Name="CUSATEXTOEXTRA2DOC" Type="Int32" Nullable="false" />
+          <Property Name="CUSATEXTOEXTRA3DOC" Type="Int32" Nullable="false" />
+          <Property Name="CUSAFECHAEXTRADOC" Type="Int32" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA1DOC" Type="Int32" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA2DOC" Type="Int32" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA3DOC" Type="Int32" Nullable="false" />
+          <Property Name="CUSAIMPORTEEXTRA4DOC" Type="Int32" Nullable="false" />
+          <Property Name="CUSAEXTRACOMOGASTO" Type="Int32" Nullable="false" />
+          <Property Name="CUSAOBSERVACIONES" Type="Int32" Nullable="false" />
+          <Property Name="CPRESENTAFISCAL" Type="Int32" Nullable="false" />
+          <Property Name="CPRESENTAREFERENCIA" Type="Int32" Nullable="false" />
+          <Property Name="CPRESENTACONDICIONES" Type="Int32" Nullable="false" />
+          <Property Name="CPRESENTAENVIO" Type="Int32" Nullable="false" />
+          <Property Name="CPRESENTADETALLE" Type="Int32" Nullable="false" />
+          <Property Name="CPRESENTAIMPRIMIR" Type="Int32" Nullable="false" />
+          <Property Name="CPRESENTAPAGAR" Type="Int32" Nullable="false" />
+          <Property Name="CPRESENTASALDAR" Type="Int32" Nullable="false" />
+          <Property Name="CPRESENTADOCUMENTAR" Type="Int32" Nullable="false" />
+          <Property Name="CPRESENTAGASTOSCOMPRA" Type="Int32" Nullable="false" />
+          <Property Name="CSEGCONTCONCEPTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CBANENCABEZADO" Type="Int32" Nullable="false" />
+          <Property Name="CBANMOVIMIENTO" Type="Int32" Nullable="false" />
+          <Property Name="CBANDESCUENTO" Type="Int32" Nullable="false" />
+          <Property Name="CBANIMPUESTO" Type="Int32" Nullable="false" />
+          <Property Name="CBANACCIONAUTOMATICA" Type="Int32" Nullable="false" />
+          <Property Name="CTIMESTAMP" Type="String" MaxLength="23" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CNOFOLIO" Type="Double" Nullable="false" />
+          <Property Name="CIDPROCESOSEGURIDAD" Type="Int32" Nullable="false" />
+          <Property Name="CUSAGTOMOV" Type="Int32" Nullable="false" />
+          <Property Name="CUSASCMOV" Type="Int32" Nullable="false" />
+          <Property Name="CIDASTOCON" Type="Int32" Nullable="false" />
+          <Property Name="CSCCPTO2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CSCCPTO3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CSCMOVTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CIDCONAUTO" Type="Int32" Nullable="false" />
+          <Property Name="CIDALMASUM" Type="Int32" Nullable="false" />
+          <Property Name="CUSACOMVTA" Type="Int32" Nullable="false" />
+          <Property Name="CIDPRSEG02" Type="Int32" Nullable="false" />
+          <Property Name="CIDPRSEG03" Type="Int32" Nullable="false" />
+          <Property Name="CIDPRSEG04" Type="Int32" Nullable="false" />
+          <Property Name="CIDPRSEG05" Type="Int32" Nullable="false" />
+          <Property Name="CFORMAAJ01" Type="Int32" Nullable="false" />
+          <Property Name="CIDPRSEG06" Type="Int32" Nullable="false" />
+          <Property Name="CAPFORMULA" Type="Int32" Nullable="false" />
+          <Property Name="CESCFD" Type="Int32" Nullable="false" />
+          <Property Name="CIDFIRMARL" Type="Int32" Nullable="false" />
+          <Property Name="CGDAPASSW" Type="Int32" Nullable="false" />
+          <Property Name="CEMITEYENT" Type="Int32" Nullable="false" />
+          <Property Name="CBANCFD" Type="Int32" Nullable="false" />
+          <Property Name="CREPIMPCFD" Type="String" MaxLength="253" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CIDDIRSUCU" Type="Int32" Nullable="false" />
+          <Property Name="CBANDIRSUC" Type="Int32" Nullable="false" />
+          <Property Name="CVERFACELE" Type="Int32" Nullable="false" />
+          <Property Name="CCALFECHAS" Type="Int32" Nullable="false" />
+          <Property Name="CTIPCAMTR1" Type="Int32" Nullable="false" />
+          <Property Name="CTIPCAMTR2" Type="Int32" Nullable="false" />
+          <Property Name="CCONSOLIDA" Type="Int32" Nullable="false" />
+          <Property Name="CENVIODIG" Type="Int32" Nullable="false" />
+          <Property Name="CBANTRANS" Type="Int32" Nullable="false" />
+          <Property Name="CCONFNOAPR" Type="Int32" Nullable="false" />
+          <Property Name="CNOAPROB" Type="Int32" Nullable="false" />
+          <Property Name="CAUTOIMPR" Type="Int32" Nullable="false" />
+          <Property Name="CRECIBECFD" Type="Int32" Nullable="false" />
+          <Property Name="CSISTORIG" Type="Int32" Nullable="false" />
+          <Property Name="CIDCPTODE1" Type="Int32" Nullable="false" />
+          <Property Name="CIDCPTODE2" Type="Int32" Nullable="false" />
+          <Property Name="CIDCPTODE3" Type="Int32" Nullable="false" />
+          <Property Name="CPLAMIGCFD" Type="String" MaxLength="253" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CIDPRSEG07" Type="Int32" Nullable="false" />
+          <Property Name="CRESERVADO" Type="Int32" Nullable="false" />
+          <Property Name="CVERREFER" Type="Int32" Nullable="false" />
+          <Property Name="CVERDOCORI" Type="Int32" Nullable="false" />
+          <Property Name="CCBB" Type="Int32" Nullable="false" />
+          <Property Name="CCARTAPOR" Type="Int32" Nullable="false" />
+          <Property Name="CCOMPDONAT" Type="Int32" Nullable="false" />
+          <Property Name="COBSXML" Type="Int32" Nullable="false" />
+          <Property Name="CRUTAENTREGA" Type="String" MaxLength="253" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CPREFIJOCONCEPTO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CREGIMFISC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CCOMPEDUCA" Type="Int32" Nullable="false" />
+          <Property Name="CMETODOPAG" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CVERESQUE" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CIDFIRMADSL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CORDENCAPTURA" Type="String" MaxLength="52" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CESTATUS" Type="Int32" Nullable="false" />
+          <Property Name="CIDMONEDA" Type="Int32" Nullable="false" />
+          <Property Name="CIDCUENTA" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="adMarissa_Bios_no_le_pEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="admAgentes" EntityType="Self.admAgente" />
+          <EntitySet Name="admConceptos" EntityType="Self.admConcepto" />
+          <EntitySet Name="admDocumentos" EntityType="adMarissa_Bios_no_le_pModel.admDocumento" />
+          <EntitySet Name="TablaUsuarios" EntityType="adMarissa_Bios_no_le_pModel.TablaUsuario" />
+        </EntityContainer>
+        <EntityType Name="admDocumento">
+          <Key>
+            <PropertyRef Name="CIDDOCUMENTO" />
+          </Key>
+          <Property Name="CIDDOCUMENTO" Type="Int32" Nullable="false" />
+          <Property Name="CIDDOCUMENTODE" Type="Int32" Nullable="false" />
+          <Property Name="CIDCONCEPTODOCUMENTO" Type="Int32" Nullable="false" />
+          <Property Name="CSERIEDOCUMENTO" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="CFOLIO" Type="Double" Nullable="false" />
+          <Property Name="CFECHA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CIDCLIENTEPROVEEDOR" Type="Int32" Nullable="false" />
+          <Property Name="CRAZONSOCIAL" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CRFC" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CIDAGENTE" Type="Int32" Nullable="false" />
+          <Property Name="CFECHAVENCIMIENTO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CFECHAPRONTOPAGO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CFECHAENTREGARECEPCION" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CFECHAULTIMOINTERES" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CIDMONEDA" Type="Int32" Nullable="false" />
+          <Property Name="CTIPOCAMBIO" Type="Double" Nullable="false" />
+          <Property Name="CREFERENCIA" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="COBSERVACIONES" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CNATURALEZA" Type="Int32" Nullable="false" />
+          <Property Name="CIDDOCUMENTOORIGEN" Type="Int32" Nullable="false" />
+          <Property Name="CPLANTILLA" Type="Int32" Nullable="false" />
+          <Property Name="CUSACLIENTE" Type="Int32" Nullable="false" />
+          <Property Name="CUSAPROVEEDOR" Type="Int32" Nullable="false" />
+          <Property Name="CAFECTADO" Type="Int32" Nullable="false" />
+          <Property Name="CIMPRESO" Type="Int32" Nullable="false" />
+          <Property Name="CCANCELADO" Type="Int32" Nullable="false" />
+          <Property Name="CDEVUELTO" Type="Int32" Nullable="false" />
+          <Property Name="CIDPREPOLIZA" Type="Int32" Nullable="false" />
+          <Property Name="CIDPREPOLIZACANCELACION" Type="Int32" Nullable="false" />
+          <Property Name="CESTADOCONTABLE" Type="Int32" Nullable="false" />
+          <Property Name="CNETO" Type="Double" Nullable="false" />
+          <Property Name="CIMPUESTO1" Type="Double" Nullable="false" />
+          <Property Name="CIMPUESTO2" Type="Double" Nullable="false" />
+          <Property Name="CIMPUESTO3" Type="Double" Nullable="false" />
+          <Property Name="CRETENCION1" Type="Double" Nullable="false" />
+          <Property Name="CRETENCION2" Type="Double" Nullable="false" />
+          <Property Name="CDESCUENTOMOV" Type="Double" Nullable="false" />
+          <Property Name="CDESCUENTODOC1" Type="Double" Nullable="false" />
+          <Property Name="CDESCUENTODOC2" Type="Double" Nullable="false" />
+          <Property Name="CGASTO1" Type="Double" Nullable="false" />
+          <Property Name="CGASTO2" Type="Double" Nullable="false" />
+          <Property Name="CGASTO3" Type="Double" Nullable="false" />
+          <Property Name="CTOTAL" Type="Double" Nullable="false" />
+          <Property Name="CPENDIENTE" Type="Double" Nullable="false" />
+          <Property Name="CTOTALUNIDADES" Type="Double" Nullable="false" />
+          <Property Name="CDESCUENTOPRONTOPAGO" Type="Double" Nullable="false" />
+          <Property Name="CPORCENTAJEIMPUESTO1" Type="Double" Nullable="false" />
+          <Property Name="CPORCENTAJEIMPUESTO2" Type="Double" Nullable="false" />
+          <Property Name="CPORCENTAJEIMPUESTO3" Type="Double" Nullable="false" />
+          <Property Name="CPORCENTAJERETENCION1" Type="Double" Nullable="false" />
+          <Property Name="CPORCENTAJERETENCION2" Type="Double" Nullable="false" />
+          <Property Name="CPORCENTAJEINTERES" Type="Double" Nullable="false" />
+          <Property Name="CTEXTOEXTRA1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CTEXTOEXTRA2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CTEXTOEXTRA3" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CFECHAEXTRA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CIMPORTEEXTRA1" Type="Double" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA2" Type="Double" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA3" Type="Double" Nullable="false" />
+          <Property Name="CIMPORTEEXTRA4" Type="Double" Nullable="false" />
+          <Property Name="CDESTINATARIO" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CNUMEROGUIA" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CMENSAJERIA" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CCUENTAMENSAJERIA" Type="String" Nullable="false" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="CNUMEROCAJAS" Type="Double" Nullable="false" />
+          <Property Name="CPESO" Type="Double" Nullable="false" />
+          <Property Name="CBANOBSERVACIONES" Type="Int32" Nullable="false" />
+          <Property Name="CBANDATOSENVIO" Type="Int32" Nullable="false" />
+          <Property Name="CBANCONDICIONESCREDITO" Type="Int32" Nullable="false" />
+          <Property Name="CBANGASTOS" Type="Int32" Nullable="false" />
+          <Property Name="CUNIDADESPENDIENTES" Type="Double" Nullable="false" />
+          <Property Name="CTIMESTAMP" Type="String" Nullable="false" MaxLength="23" FixedLength="false" Unicode="false" />
+          <Property Name="CIMPCHEQPAQ" Type="Double" Nullable="false" />
+          <Property Name="CSISTORIG" Type="Int32" Nullable="false" />
+          <Property Name="CIDMONEDCA" Type="Int32" Nullable="false" />
+          <Property Name="CTIPOCAMCA" Type="Double" Nullable="false" />
+          <Property Name="CESCFD" Type="Int32" Nullable="false" />
+          <Property Name="CTIENECFD" Type="Int32" Nullable="false" />
+          <Property Name="CLUGAREXPE" Type="String" Nullable="false" MaxLength="380" FixedLength="false" Unicode="false" />
+          <Property Name="CMETODOPAG" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CNUMPARCIA" Type="Int32" Nullable="false" />
+          <Property Name="CCANTPARCI" Type="Int32" Nullable="false" />
+          <Property Name="CCONDIPAGO" Type="String" Nullable="false" MaxLength="253" FixedLength="false" Unicode="false" />
+          <Property Name="CNUMCTAPAG" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CGUIDDOCUMENTO" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="CUSUARIO" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CIDPROYECTO" Type="Int32" Nullable="false" />
+          <Property Name="CIDCUENTA" Type="Int32" Nullable="false" />
+          <Property Name="CTRANSACTIONID" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TablaUsuario">
+          <Key>
+            <PropertyRef Name="CIDDOCUMENTO" />
+          </Key>
+          <Property Name="CIDDOCUMENTO" Type="Int32" Nullable="false" />
+          <Property Name="CUSUARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="adMarissa_Bios_no_le_pModelStoreContainer" CdmEntityContainer="adMarissa_Bios_no_le_pEntities">
+          <EntitySetMapping Name="admAgentes">
+            <EntityTypeMapping TypeName="adMarissa_Bios_no_le_pModel.admAgente">
+              <MappingFragment StoreEntitySet="admAgentes">
+                <ScalarProperty Name="CIDAGENTE" ColumnName="CIDAGENTE" />
+                <ScalarProperty Name="CCODIGOAGENTE" ColumnName="CCODIGOAGENTE" />
+                <ScalarProperty Name="CNOMBREAGENTE" ColumnName="CNOMBREAGENTE" />
+                <ScalarProperty Name="CFECHAALTAAGENTE" ColumnName="CFECHAALTAAGENTE" />
+                <ScalarProperty Name="CTIPOAGENTE" ColumnName="CTIPOAGENTE" />
+                <ScalarProperty Name="CCOMISIONVENTAAGENTE" ColumnName="CCOMISIONVENTAAGENTE" />
+                <ScalarProperty Name="CCOMISIONCOBROAGENTE" ColumnName="CCOMISIONCOBROAGENTE" />
+                <ScalarProperty Name="CIDCLIENTE" ColumnName="CIDCLIENTE" />
+                <ScalarProperty Name="CIDPROVEEDOR" ColumnName="CIDPROVEEDOR" />
+                <ScalarProperty Name="CIDVALORCLASIFICACION1" ColumnName="CIDVALORCLASIFICACION1" />
+                <ScalarProperty Name="CIDVALORCLASIFICACION2" ColumnName="CIDVALORCLASIFICACION2" />
+                <ScalarProperty Name="CIDVALORCLASIFICACION3" ColumnName="CIDVALORCLASIFICACION3" />
+                <ScalarProperty Name="CIDVALORCLASIFICACION4" ColumnName="CIDVALORCLASIFICACION4" />
+                <ScalarProperty Name="CIDVALORCLASIFICACION5" ColumnName="CIDVALORCLASIFICACION5" />
+                <ScalarProperty Name="CIDVALORCLASIFICACION6" ColumnName="CIDVALORCLASIFICACION6" />
+                <ScalarProperty Name="CSEGCONTAGENTE" ColumnName="CSEGCONTAGENTE" />
+                <ScalarProperty Name="CTEXTOEXTRA1" ColumnName="CTEXTOEXTRA1" />
+                <ScalarProperty Name="CTEXTOEXTRA2" ColumnName="CTEXTOEXTRA2" />
+                <ScalarProperty Name="CTEXTOEXTRA3" ColumnName="CTEXTOEXTRA3" />
+                <ScalarProperty Name="CFECHAEXTRA" ColumnName="CFECHAEXTRA" />
+                <ScalarProperty Name="CIMPORTEEXTRA1" ColumnName="CIMPORTEEXTRA1" />
+                <ScalarProperty Name="CIMPORTEEXTRA2" ColumnName="CIMPORTEEXTRA2" />
+                <ScalarProperty Name="CIMPORTEEXTRA3" ColumnName="CIMPORTEEXTRA3" />
+                <ScalarProperty Name="CIMPORTEEXTRA4" ColumnName="CIMPORTEEXTRA4" />
+                <ScalarProperty Name="CTIMESTAMP" ColumnName="CTIMESTAMP" />
+                <ScalarProperty Name="CSCAGENTE2" ColumnName="CSCAGENTE2" />
+                <ScalarProperty Name="CSCAGENTE3" ColumnName="CSCAGENTE3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="admConceptos">
+            <EntityTypeMapping TypeName="adMarissa_Bios_no_le_pModel.admConcepto">
+              <MappingFragment StoreEntitySet="admConceptos">
+                <ScalarProperty Name="CIDCONCEPTODOCUMENTO" ColumnName="CIDCONCEPTODOCUMENTO" />
+                <ScalarProperty Name="CCODIGOCONCEPTO" ColumnName="CCODIGOCONCEPTO" />
+                <ScalarProperty Name="CNOMBRECONCEPTO" ColumnName="CNOMBRECONCEPTO" />
+                <ScalarProperty Name="CIDDOCUMENTODE" ColumnName="CIDDOCUMENTODE" />
+                <ScalarProperty Name="CNATURALEZA" ColumnName="CNATURALEZA" />
+                <ScalarProperty Name="CDOCTOACREDITO" ColumnName="CDOCTOACREDITO" />
+                <ScalarProperty Name="CTIPOFOLIO" ColumnName="CTIPOFOLIO" />
+                <ScalarProperty Name="CMAXIMOMOVTOS" ColumnName="CMAXIMOMOVTOS" />
+                <ScalarProperty Name="CCREACLIENTE" ColumnName="CCREACLIENTE" />
+                <ScalarProperty Name="CSUMARPROMOCIONES" ColumnName="CSUMARPROMOCIONES" />
+                <ScalarProperty Name="CFORMAPREIMPRESA" ColumnName="CFORMAPREIMPRESA" />
+                <ScalarProperty Name="CORDENCALCULO" ColumnName="CORDENCALCULO" />
+                <ScalarProperty Name="CUSANOMBRECTEPROV" ColumnName="CUSANOMBRECTEPROV" />
+                <ScalarProperty Name="CUSARFC" ColumnName="CUSARFC" />
+                <ScalarProperty Name="CUSAFECHAVENCIMIENTO" ColumnName="CUSAFECHAVENCIMIENTO" />
+                <ScalarProperty Name="CUSAFECHAENTREGARECEPCION" ColumnName="CUSAFECHAENTREGARECEPCION" />
+                <ScalarProperty Name="CUSAMONEDA" ColumnName="CUSAMONEDA" />
+                <ScalarProperty Name="CUSATIPOCAMBIO" ColumnName="CUSATIPOCAMBIO" />
+                <ScalarProperty Name="CUSACODIGOAGENTE" ColumnName="CUSACODIGOAGENTE" />
+                <ScalarProperty Name="CUSANOMBREAGENTE" ColumnName="CUSANOMBREAGENTE" />
+                <ScalarProperty Name="CUSADIRECCION" ColumnName="CUSADIRECCION" />
+                <ScalarProperty Name="CUSAREFERENCIA" ColumnName="CUSAREFERENCIA" />
+                <ScalarProperty Name="CSERIEPOROMISION" ColumnName="CSERIEPOROMISION" />
+                <ScalarProperty Name="CANCHOCODIGOPRODUCTO" ColumnName="CANCHOCODIGOPRODUCTO" />
+                <ScalarProperty Name="CUSANOMBREPRODUCTO" ColumnName="CUSANOMBREPRODUCTO" />
+                <ScalarProperty Name="CANCHONOMBREPRODUCTO" ColumnName="CANCHONOMBREPRODUCTO" />
+                <ScalarProperty Name="CUSAALMACEN" ColumnName="CUSAALMACEN" />
+                <ScalarProperty Name="CANCHOCODIGOALMACEN" ColumnName="CANCHOCODIGOALMACEN" />
+                <ScalarProperty Name="CANCHOIMPORTES" ColumnName="CANCHOIMPORTES" />
+                <ScalarProperty Name="CANCHOPORCENTAJES" ColumnName="CANCHOPORCENTAJES" />
+                <ScalarProperty Name="CANCHOUNIDADPESOMEDIDA" ColumnName="CANCHOUNIDADPESOMEDIDA" />
+                <ScalarProperty Name="CUSAPRECIO" ColumnName="CUSAPRECIO" />
+                <ScalarProperty Name="CIDFORMULAPRECIO" ColumnName="CIDFORMULAPRECIO" />
+                <ScalarProperty Name="CUSACOSTOCAPTURADO" ColumnName="CUSACOSTOCAPTURADO" />
+                <ScalarProperty Name="CIDFORMULACOSTOCAPTURADO" ColumnName="CIDFORMULACOSTOCAPTURADO" />
+                <ScalarProperty Name="CUSAEXISTENCIA" ColumnName="CUSAEXISTENCIA" />
+                <ScalarProperty Name="CUSANETO" ColumnName="CUSANETO" />
+                <ScalarProperty Name="CIDFORMULANETO" ColumnName="CIDFORMULANETO" />
+                <ScalarProperty Name="CUSAPORCENTAJEIMPUESTO1" ColumnName="CUSAPORCENTAJEIMPUESTO1" />
+                <ScalarProperty Name="CIDFORMULAPORCIMPUESTO1" ColumnName="CIDFORMULAPORCIMPUESTO1" />
+                <ScalarProperty Name="CUSAIMPUESTO1" ColumnName="CUSAIMPUESTO1" />
+                <ScalarProperty Name="CIDFORMULAIMPUESTO1" ColumnName="CIDFORMULAIMPUESTO1" />
+                <ScalarProperty Name="CUSAPORCENTAJEIMPUESTO2" ColumnName="CUSAPORCENTAJEIMPUESTO2" />
+                <ScalarProperty Name="CIDFORMULAPORCIMPUESTO2" ColumnName="CIDFORMULAPORCIMPUESTO2" />
+                <ScalarProperty Name="CUSAIMPUESTO2" ColumnName="CUSAIMPUESTO2" />
+                <ScalarProperty Name="CIDFORMULAIMPUESTO2" ColumnName="CIDFORMULAIMPUESTO2" />
+                <ScalarProperty Name="CUSAPORCENTAJEIMPUESTO3" ColumnName="CUSAPORCENTAJEIMPUESTO3" />
+                <ScalarProperty Name="CIDFORMULAPORCIMPUESTO3" ColumnName="CIDFORMULAPORCIMPUESTO3" />
+                <ScalarProperty Name="CUSAIMPUESTO3" ColumnName="CUSAIMPUESTO3" />
+                <ScalarProperty Name="CIDFORMULAIMPUESTO3" ColumnName="CIDFORMULAIMPUESTO3" />
+                <ScalarProperty Name="CUSAPORCENTAJERETENCION1" ColumnName="CUSAPORCENTAJERETENCION1" />
+                <ScalarProperty Name="CIDFORMULAPORCRETENCION1" ColumnName="CIDFORMULAPORCRETENCION1" />
+                <ScalarProperty Name="CUSARETENCION1" ColumnName="CUSARETENCION1" />
+                <ScalarProperty Name="CIDFORMULARETENCION1" ColumnName="CIDFORMULARETENCION1" />
+                <ScalarProperty Name="CUSAPORCENTAJERETENCION2" ColumnName="CUSAPORCENTAJERETENCION2" />
+                <ScalarProperty Name="CIDFORMULAPORCRETENCION2" ColumnName="CIDFORMULAPORCRETENCION2" />
+                <ScalarProperty Name="CUSARETENCION2" ColumnName="CUSARETENCION2" />
+                <ScalarProperty Name="CIDFORMULARETENCION2" ColumnName="CIDFORMULARETENCION2" />
+                <ScalarProperty Name="CUSAPORCENTAJEDESCUENTO1" ColumnName="CUSAPORCENTAJEDESCUENTO1" />
+                <ScalarProperty Name="CIDFORMULAPORCDESCUENTO1" ColumnName="CIDFORMULAPORCDESCUENTO1" />
+                <ScalarProperty Name="CUSADESCUENTO1" ColumnName="CUSADESCUENTO1" />
+                <ScalarProperty Name="CIDFORMULADESCUENTO1" ColumnName="CIDFORMULADESCUENTO1" />
+                <ScalarProperty Name="CUSAPORCENTAJEDESCUENTO2" ColumnName="CUSAPORCENTAJEDESCUENTO2" />
+                <ScalarProperty Name="CIDFORMULAPORCDESCUENTO2" ColumnName="CIDFORMULAPORCDESCUENTO2" />
+                <ScalarProperty Name="CUSADESCUENTO2" ColumnName="CUSADESCUENTO2" />
+                <ScalarProperty Name="CIDFORMULADESCUENTO2" ColumnName="CIDFORMULADESCUENTO2" />
+                <ScalarProperty Name="CUSAPORCENTAJEDESCUENTO3" ColumnName="CUSAPORCENTAJEDESCUENTO3" />
+                <ScalarProperty Name="CIDFORMULAPORCDESCUENTO3" ColumnName="CIDFORMULAPORCDESCUENTO3" />
+                <ScalarProperty Name="CUSADESCUENTO3" ColumnName="CUSADESCUENTO3" />
+                <ScalarProperty Name="CIDFORMULADESCUENTO3" ColumnName="CIDFORMULADESCUENTO3" />
+                <ScalarProperty Name="CUSAPORCENTAJEDESCUENTO4" ColumnName="CUSAPORCENTAJEDESCUENTO4" />
+                <ScalarProperty Name="CIDFORMULAPORCDESCUENTO4" ColumnName="CIDFORMULAPORCDESCUENTO4" />
+                <ScalarProperty Name="CUSADESCUENTO4" ColumnName="CUSADESCUENTO4" />
+                <ScalarProperty Name="CIDFORMULADESCUENTO4" ColumnName="CIDFORMULADESCUENTO4" />
+                <ScalarProperty Name="CUSAPORCENTAJEDESCUENTO5" ColumnName="CUSAPORCENTAJEDESCUENTO5" />
+                <ScalarProperty Name="CIDFORMULAPORCDESCUENTO5" ColumnName="CIDFORMULAPORCDESCUENTO5" />
+                <ScalarProperty Name="CUSADESCUENTO5" ColumnName="CUSADESCUENTO5" />
+                <ScalarProperty Name="CIDFORMULADESCUENTO5" ColumnName="CIDFORMULADESCUENTO5" />
+                <ScalarProperty Name="CUSATOTAL" ColumnName="CUSATOTAL" />
+                <ScalarProperty Name="CANCHOREFERENCIA" ColumnName="CANCHOREFERENCIA" />
+                <ScalarProperty Name="CUSACLASIFICACIONMOVTO" ColumnName="CUSACLASIFICACIONMOVTO" />
+                <ScalarProperty Name="CANCHOVALORCLASIFICACION" ColumnName="CANCHOVALORCLASIFICACION" />
+                <ScalarProperty Name="CIDFORMULATOTAL" ColumnName="CIDFORMULATOTAL" />
+                <ScalarProperty Name="CUSADESCUENTODOC1" ColumnName="CUSADESCUENTODOC1" />
+                <ScalarProperty Name="CIDFORMULADESDOC1" ColumnName="CIDFORMULADESDOC1" />
+                <ScalarProperty Name="CUSADESCUENTODOC2" ColumnName="CUSADESCUENTODOC2" />
+                <ScalarProperty Name="CIDFORMULADESDOC2" ColumnName="CIDFORMULADESDOC2" />
+                <ScalarProperty Name="CUSAGASTO1" ColumnName="CUSAGASTO1" />
+                <ScalarProperty Name="CIDFORMULAGASTO1" ColumnName="CIDFORMULAGASTO1" />
+                <ScalarProperty Name="CUSAGASTO2" ColumnName="CUSAGASTO2" />
+                <ScalarProperty Name="CIDFORMULAGASTO2" ColumnName="CIDFORMULAGASTO2" />
+                <ScalarProperty Name="CUSAGASTO3" ColumnName="CUSAGASTO3" />
+                <ScalarProperty Name="CIDFORMULAGASTO3" ColumnName="CIDFORMULAGASTO3" />
+                <ScalarProperty Name="CUSATEXTOEXTRA1" ColumnName="CUSATEXTOEXTRA1" />
+                <ScalarProperty Name="CUSATEXTOEXTRA2" ColumnName="CUSATEXTOEXTRA2" />
+                <ScalarProperty Name="CUSATEXTOEXTRA3" ColumnName="CUSATEXTOEXTRA3" />
+                <ScalarProperty Name="CANCHOTEXTOEXTRA" ColumnName="CANCHOTEXTOEXTRA" />
+                <ScalarProperty Name="CUSAFECHAEXTRA" ColumnName="CUSAFECHAEXTRA" />
+                <ScalarProperty Name="CANCHOFECHAEXTRA" ColumnName="CANCHOFECHAEXTRA" />
+                <ScalarProperty Name="CUSAIMPORTEEXTRA1" ColumnName="CUSAIMPORTEEXTRA1" />
+                <ScalarProperty Name="CIDFORMULAEXTRA1" ColumnName="CIDFORMULAEXTRA1" />
+                <ScalarProperty Name="CUSAIMPORTEEXTRA2" ColumnName="CUSAIMPORTEEXTRA2" />
+                <ScalarProperty Name="CIDFORMULAEXTRA2" ColumnName="CIDFORMULAEXTRA2" />
+                <ScalarProperty Name="CUSAIMPORTEEXTRA3" ColumnName="CUSAIMPORTEEXTRA3" />
+                <ScalarProperty Name="CIDFORMULAEXTRA3" ColumnName="CIDFORMULAEXTRA3" />
+                <ScalarProperty Name="CUSAIMPORTEEXTRA4" ColumnName="CUSAIMPORTEEXTRA4" />
+                <ScalarProperty Name="CIDFORMULAEXTRA4" ColumnName="CIDFORMULAEXTRA4" />
+                <ScalarProperty Name="CUSATEXTOEXTRA1DOC" ColumnName="CUSATEXTOEXTRA1DOC" />
+                <ScalarProperty Name="CUSATEXTOEXTRA2DOC" ColumnName="CUSATEXTOEXTRA2DOC" />
+                <ScalarProperty Name="CUSATEXTOEXTRA3DOC" ColumnName="CUSATEXTOEXTRA3DOC" />
+                <ScalarProperty Name="CUSAFECHAEXTRADOC" ColumnName="CUSAFECHAEXTRADOC" />
+                <ScalarProperty Name="CUSAIMPORTEEXTRA1DOC" ColumnName="CUSAIMPORTEEXTRA1DOC" />
+                <ScalarProperty Name="CUSAIMPORTEEXTRA2DOC" ColumnName="CUSAIMPORTEEXTRA2DOC" />
+                <ScalarProperty Name="CUSAIMPORTEEXTRA3DOC" ColumnName="CUSAIMPORTEEXTRA3DOC" />
+                <ScalarProperty Name="CUSAIMPORTEEXTRA4DOC" ColumnName="CUSAIMPORTEEXTRA4DOC" />
+                <ScalarProperty Name="CUSAEXTRACOMOGASTO" ColumnName="CUSAEXTRACOMOGASTO" />
+                <ScalarProperty Name="CUSAOBSERVACIONES" ColumnName="CUSAOBSERVACIONES" />
+                <ScalarProperty Name="CPRESENTAFISCAL" ColumnName="CPRESENTAFISCAL" />
+                <ScalarProperty Name="CPRESENTAREFERENCIA" ColumnName="CPRESENTAREFERENCIA" />
+                <ScalarProperty Name="CPRESENTACONDICIONES" ColumnName="CPRESENTACONDICIONES" />
+                <ScalarProperty Name="CPRESENTAENVIO" ColumnName="CPRESENTAENVIO" />
+                <ScalarProperty Name="CPRESENTADETALLE" ColumnName="CPRESENTADETALLE" />
+                <ScalarProperty Name="CPRESENTAIMPRIMIR" ColumnName="CPRESENTAIMPRIMIR" />
+                <ScalarProperty Name="CPRESENTAPAGAR" ColumnName="CPRESENTAPAGAR" />
+                <ScalarProperty Name="CPRESENTASALDAR" ColumnName="CPRESENTASALDAR" />
+                <ScalarProperty Name="CPRESENTADOCUMENTAR" ColumnName="CPRESENTADOCUMENTAR" />
+                <ScalarProperty Name="CPRESENTAGASTOSCOMPRA" ColumnName="CPRESENTAGASTOSCOMPRA" />
+                <ScalarProperty Name="CSEGCONTCONCEPTO" ColumnName="CSEGCONTCONCEPTO" />
+                <ScalarProperty Name="CBANENCABEZADO" ColumnName="CBANENCABEZADO" />
+                <ScalarProperty Name="CBANMOVIMIENTO" ColumnName="CBANMOVIMIENTO" />
+                <ScalarProperty Name="CBANDESCUENTO" ColumnName="CBANDESCUENTO" />
+                <ScalarProperty Name="CBANIMPUESTO" ColumnName="CBANIMPUESTO" />
+                <ScalarProperty Name="CBANACCIONAUTOMATICA" ColumnName="CBANACCIONAUTOMATICA" />
+                <ScalarProperty Name="CTIMESTAMP" ColumnName="CTIMESTAMP" />
+                <ScalarProperty Name="CNOFOLIO" ColumnName="CNOFOLIO" />
+                <ScalarProperty Name="CIDPROCESOSEGURIDAD" ColumnName="CIDPROCESOSEGURIDAD" />
+                <ScalarProperty Name="CUSAGTOMOV" ColumnName="CUSAGTOMOV" />
+                <ScalarProperty Name="CUSASCMOV" ColumnName="CUSASCMOV" />
+                <ScalarProperty Name="CIDASTOCON" ColumnName="CIDASTOCON" />
+                <ScalarProperty Name="CSCCPTO2" ColumnName="CSCCPTO2" />
+                <ScalarProperty Name="CSCCPTO3" ColumnName="CSCCPTO3" />
+                <ScalarProperty Name="CSCMOVTO" ColumnName="CSCMOVTO" />
+                <ScalarProperty Name="CIDCONAUTO" ColumnName="CIDCONAUTO" />
+                <ScalarProperty Name="CIDALMASUM" ColumnName="CIDALMASUM" />
+                <ScalarProperty Name="CUSACOMVTA" ColumnName="CUSACOMVTA" />
+                <ScalarProperty Name="CIDPRSEG02" ColumnName="CIDPRSEG02" />
+                <ScalarProperty Name="CIDPRSEG03" ColumnName="CIDPRSEG03" />
+                <ScalarProperty Name="CIDPRSEG04" ColumnName="CIDPRSEG04" />
+                <ScalarProperty Name="CIDPRSEG05" ColumnName="CIDPRSEG05" />
+                <ScalarProperty Name="CFORMAAJ01" ColumnName="CFORMAAJ01" />
+                <ScalarProperty Name="CIDPRSEG06" ColumnName="CIDPRSEG06" />
+                <ScalarProperty Name="CAPFORMULA" ColumnName="CAPFORMULA" />
+                <ScalarProperty Name="CESCFD" ColumnName="CESCFD" />
+                <ScalarProperty Name="CIDFIRMARL" ColumnName="CIDFIRMARL" />
+                <ScalarProperty Name="CGDAPASSW" ColumnName="CGDAPASSW" />
+                <ScalarProperty Name="CEMITEYENT" ColumnName="CEMITEYENT" />
+                <ScalarProperty Name="CBANCFD" ColumnName="CBANCFD" />
+                <ScalarProperty Name="CREPIMPCFD" ColumnName="CREPIMPCFD" />
+                <ScalarProperty Name="CIDDIRSUCU" ColumnName="CIDDIRSUCU" />
+                <ScalarProperty Name="CBANDIRSUC" ColumnName="CBANDIRSUC" />
+                <ScalarProperty Name="CVERFACELE" ColumnName="CVERFACELE" />
+                <ScalarProperty Name="CCALFECHAS" ColumnName="CCALFECHAS" />
+                <ScalarProperty Name="CTIPCAMTR1" ColumnName="CTIPCAMTR1" />
+                <ScalarProperty Name="CTIPCAMTR2" ColumnName="CTIPCAMTR2" />
+                <ScalarProperty Name="CCONSOLIDA" ColumnName="CCONSOLIDA" />
+                <ScalarProperty Name="CENVIODIG" ColumnName="CENVIODIG" />
+                <ScalarProperty Name="CBANTRANS" ColumnName="CBANTRANS" />
+                <ScalarProperty Name="CCONFNOAPR" ColumnName="CCONFNOAPR" />
+                <ScalarProperty Name="CNOAPROB" ColumnName="CNOAPROB" />
+                <ScalarProperty Name="CAUTOIMPR" ColumnName="CAUTOIMPR" />
+                <ScalarProperty Name="CRECIBECFD" ColumnName="CRECIBECFD" />
+                <ScalarProperty Name="CSISTORIG" ColumnName="CSISTORIG" />
+                <ScalarProperty Name="CIDCPTODE1" ColumnName="CIDCPTODE1" />
+                <ScalarProperty Name="CIDCPTODE2" ColumnName="CIDCPTODE2" />
+                <ScalarProperty Name="CIDCPTODE3" ColumnName="CIDCPTODE3" />
+                <ScalarProperty Name="CPLAMIGCFD" ColumnName="CPLAMIGCFD" />
+                <ScalarProperty Name="CIDPRSEG07" ColumnName="CIDPRSEG07" />
+                <ScalarProperty Name="CRESERVADO" ColumnName="CRESERVADO" />
+                <ScalarProperty Name="CVERREFER" ColumnName="CVERREFER" />
+                <ScalarProperty Name="CVERDOCORI" ColumnName="CVERDOCORI" />
+                <ScalarProperty Name="CCBB" ColumnName="CCBB" />
+                <ScalarProperty Name="CCARTAPOR" ColumnName="CCARTAPOR" />
+                <ScalarProperty Name="CCOMPDONAT" ColumnName="CCOMPDONAT" />
+                <ScalarProperty Name="COBSXML" ColumnName="COBSXML" />
+                <ScalarProperty Name="CRUTAENTREGA" ColumnName="CRUTAENTREGA" />
+                <ScalarProperty Name="CPREFIJOCONCEPTO" ColumnName="CPREFIJOCONCEPTO" />
+                <ScalarProperty Name="CREGIMFISC" ColumnName="CREGIMFISC" />
+                <ScalarProperty Name="CCOMPEDUCA" ColumnName="CCOMPEDUCA" />
+                <ScalarProperty Name="CMETODOPAG" ColumnName="CMETODOPAG" />
+                <ScalarProperty Name="CVERESQUE" ColumnName="CVERESQUE" />
+                <ScalarProperty Name="CIDFIRMADSL" ColumnName="CIDFIRMADSL" />
+                <ScalarProperty Name="CORDENCAPTURA" ColumnName="CORDENCAPTURA" />
+                <ScalarProperty Name="CESTATUS" ColumnName="CESTATUS" />
+                <ScalarProperty Name="CIDMONEDA" ColumnName="CIDMONEDA" />
+                <ScalarProperty Name="CIDCUENTA" ColumnName="CIDCUENTA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="admDocumentos">
+            <EntityTypeMapping TypeName="adMarissa_Bios_no_le_pModel.admDocumento">
+              <MappingFragment StoreEntitySet="admDocumentos">
+                <ScalarProperty Name="CTRANSACTIONID" ColumnName="CTRANSACTIONID" />
+                <ScalarProperty Name="CIDCUENTA" ColumnName="CIDCUENTA" />
+                <ScalarProperty Name="CIDPROYECTO" ColumnName="CIDPROYECTO" />
+                <ScalarProperty Name="CUSUARIO" ColumnName="CUSUARIO" />
+                <ScalarProperty Name="CGUIDDOCUMENTO" ColumnName="CGUIDDOCUMENTO" />
+                <ScalarProperty Name="CNUMCTAPAG" ColumnName="CNUMCTAPAG" />
+                <ScalarProperty Name="CCONDIPAGO" ColumnName="CCONDIPAGO" />
+                <ScalarProperty Name="CCANTPARCI" ColumnName="CCANTPARCI" />
+                <ScalarProperty Name="CNUMPARCIA" ColumnName="CNUMPARCIA" />
+                <ScalarProperty Name="CMETODOPAG" ColumnName="CMETODOPAG" />
+                <ScalarProperty Name="CLUGAREXPE" ColumnName="CLUGAREXPE" />
+                <ScalarProperty Name="CTIENECFD" ColumnName="CTIENECFD" />
+                <ScalarProperty Name="CESCFD" ColumnName="CESCFD" />
+                <ScalarProperty Name="CTIPOCAMCA" ColumnName="CTIPOCAMCA" />
+                <ScalarProperty Name="CIDMONEDCA" ColumnName="CIDMONEDCA" />
+                <ScalarProperty Name="CSISTORIG" ColumnName="CSISTORIG" />
+                <ScalarProperty Name="CIMPCHEQPAQ" ColumnName="CIMPCHEQPAQ" />
+                <ScalarProperty Name="CTIMESTAMP" ColumnName="CTIMESTAMP" />
+                <ScalarProperty Name="CUNIDADESPENDIENTES" ColumnName="CUNIDADESPENDIENTES" />
+                <ScalarProperty Name="CBANGASTOS" ColumnName="CBANGASTOS" />
+                <ScalarProperty Name="CBANCONDICIONESCREDITO" ColumnName="CBANCONDICIONESCREDITO" />
+                <ScalarProperty Name="CBANDATOSENVIO" ColumnName="CBANDATOSENVIO" />
+                <ScalarProperty Name="CBANOBSERVACIONES" ColumnName="CBANOBSERVACIONES" />
+                <ScalarProperty Name="CPESO" ColumnName="CPESO" />
+                <ScalarProperty Name="CNUMEROCAJAS" ColumnName="CNUMEROCAJAS" />
+                <ScalarProperty Name="CCUENTAMENSAJERIA" ColumnName="CCUENTAMENSAJERIA" />
+                <ScalarProperty Name="CMENSAJERIA" ColumnName="CMENSAJERIA" />
+                <ScalarProperty Name="CNUMEROGUIA" ColumnName="CNUMEROGUIA" />
+                <ScalarProperty Name="CDESTINATARIO" ColumnName="CDESTINATARIO" />
+                <ScalarProperty Name="CIMPORTEEXTRA4" ColumnName="CIMPORTEEXTRA4" />
+                <ScalarProperty Name="CIMPORTEEXTRA3" ColumnName="CIMPORTEEXTRA3" />
+                <ScalarProperty Name="CIMPORTEEXTRA2" ColumnName="CIMPORTEEXTRA2" />
+                <ScalarProperty Name="CIMPORTEEXTRA1" ColumnName="CIMPORTEEXTRA1" />
+                <ScalarProperty Name="CFECHAEXTRA" ColumnName="CFECHAEXTRA" />
+                <ScalarProperty Name="CTEXTOEXTRA3" ColumnName="CTEXTOEXTRA3" />
+                <ScalarProperty Name="CTEXTOEXTRA2" ColumnName="CTEXTOEXTRA2" />
+                <ScalarProperty Name="CTEXTOEXTRA1" ColumnName="CTEXTOEXTRA1" />
+                <ScalarProperty Name="CPORCENTAJEINTERES" ColumnName="CPORCENTAJEINTERES" />
+                <ScalarProperty Name="CPORCENTAJERETENCION2" ColumnName="CPORCENTAJERETENCION2" />
+                <ScalarProperty Name="CPORCENTAJERETENCION1" ColumnName="CPORCENTAJERETENCION1" />
+                <ScalarProperty Name="CPORCENTAJEIMPUESTO3" ColumnName="CPORCENTAJEIMPUESTO3" />
+                <ScalarProperty Name="CPORCENTAJEIMPUESTO2" ColumnName="CPORCENTAJEIMPUESTO2" />
+                <ScalarProperty Name="CPORCENTAJEIMPUESTO1" ColumnName="CPORCENTAJEIMPUESTO1" />
+                <ScalarProperty Name="CDESCUENTOPRONTOPAGO" ColumnName="CDESCUENTOPRONTOPAGO" />
+                <ScalarProperty Name="CTOTALUNIDADES" ColumnName="CTOTALUNIDADES" />
+                <ScalarProperty Name="CPENDIENTE" ColumnName="CPENDIENTE" />
+                <ScalarProperty Name="CTOTAL" ColumnName="CTOTAL" />
+                <ScalarProperty Name="CGASTO3" ColumnName="CGASTO3" />
+                <ScalarProperty Name="CGASTO2" ColumnName="CGASTO2" />
+                <ScalarProperty Name="CGASTO1" ColumnName="CGASTO1" />
+                <ScalarProperty Name="CDESCUENTODOC2" ColumnName="CDESCUENTODOC2" />
+                <ScalarProperty Name="CDESCUENTODOC1" ColumnName="CDESCUENTODOC1" />
+                <ScalarProperty Name="CDESCUENTOMOV" ColumnName="CDESCUENTOMOV" />
+                <ScalarProperty Name="CRETENCION2" ColumnName="CRETENCION2" />
+                <ScalarProperty Name="CRETENCION1" ColumnName="CRETENCION1" />
+                <ScalarProperty Name="CIMPUESTO3" ColumnName="CIMPUESTO3" />
+                <ScalarProperty Name="CIMPUESTO2" ColumnName="CIMPUESTO2" />
+                <ScalarProperty Name="CIMPUESTO1" ColumnName="CIMPUESTO1" />
+                <ScalarProperty Name="CNETO" ColumnName="CNETO" />
+                <ScalarProperty Name="CESTADOCONTABLE" ColumnName="CESTADOCONTABLE" />
+                <ScalarProperty Name="CIDPREPOLIZACANCELACION" ColumnName="CIDPREPOLIZACANCELACION" />
+                <ScalarProperty Name="CIDPREPOLIZA" ColumnName="CIDPREPOLIZA" />
+                <ScalarProperty Name="CDEVUELTO" ColumnName="CDEVUELTO" />
+                <ScalarProperty Name="CCANCELADO" ColumnName="CCANCELADO" />
+                <ScalarProperty Name="CIMPRESO" ColumnName="CIMPRESO" />
+                <ScalarProperty Name="CAFECTADO" ColumnName="CAFECTADO" />
+                <ScalarProperty Name="CUSAPROVEEDOR" ColumnName="CUSAPROVEEDOR" />
+                <ScalarProperty Name="CUSACLIENTE" ColumnName="CUSACLIENTE" />
+                <ScalarProperty Name="CPLANTILLA" ColumnName="CPLANTILLA" />
+                <ScalarProperty Name="CIDDOCUMENTOORIGEN" ColumnName="CIDDOCUMENTOORIGEN" />
+                <ScalarProperty Name="CNATURALEZA" ColumnName="CNATURALEZA" />
+                <ScalarProperty Name="COBSERVACIONES" ColumnName="COBSERVACIONES" />
+                <ScalarProperty Name="CREFERENCIA" ColumnName="CREFERENCIA" />
+                <ScalarProperty Name="CTIPOCAMBIO" ColumnName="CTIPOCAMBIO" />
+                <ScalarProperty Name="CIDMONEDA" ColumnName="CIDMONEDA" />
+                <ScalarProperty Name="CFECHAULTIMOINTERES" ColumnName="CFECHAULTIMOINTERES" />
+                <ScalarProperty Name="CFECHAENTREGARECEPCION" ColumnName="CFECHAENTREGARECEPCION" />
+                <ScalarProperty Name="CFECHAPRONTOPAGO" ColumnName="CFECHAPRONTOPAGO" />
+                <ScalarProperty Name="CFECHAVENCIMIENTO" ColumnName="CFECHAVENCIMIENTO" />
+                <ScalarProperty Name="CIDAGENTE" ColumnName="CIDAGENTE" />
+                <ScalarProperty Name="CRFC" ColumnName="CRFC" />
+                <ScalarProperty Name="CRAZONSOCIAL" ColumnName="CRAZONSOCIAL" />
+                <ScalarProperty Name="CIDCLIENTEPROVEEDOR" ColumnName="CIDCLIENTEPROVEEDOR" />
+                <ScalarProperty Name="CFECHA" ColumnName="CFECHA" />
+                <ScalarProperty Name="CFOLIO" ColumnName="CFOLIO" />
+                <ScalarProperty Name="CSERIEDOCUMENTO" ColumnName="CSERIEDOCUMENTO" />
+                <ScalarProperty Name="CIDCONCEPTODOCUMENTO" ColumnName="CIDCONCEPTODOCUMENTO" />
+                <ScalarProperty Name="CIDDOCUMENTODE" ColumnName="CIDDOCUMENTODE" />
+                <ScalarProperty Name="CIDDOCUMENTO" ColumnName="CIDDOCUMENTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TablaUsuarios">
+            <EntityTypeMapping TypeName="adMarissa_Bios_no_le_pModel.TablaUsuario">
+              <MappingFragment StoreEntitySet="TablaUsuario">
+                <ScalarProperty Name="CUSUARIO" ColumnName="CUSUARIO" />
+                <ScalarProperty Name="CIDDOCUMENTO" ColumnName="CIDDOCUMENTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
