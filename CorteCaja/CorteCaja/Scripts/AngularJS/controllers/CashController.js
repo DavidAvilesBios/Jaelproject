@@ -19,6 +19,14 @@
         });
     }
 
+    $scope.isValid = true;
+    $scope.validateButton = function () {
+        if (!!$scope.date && !!$scope.usuario) {
+            $scope.isValid = false;
+
+        }
+    }
+
     $scope.conceptos;
     $scope.sumResult;
     $scope.sumResult1;

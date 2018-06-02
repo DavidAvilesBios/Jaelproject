@@ -5,10 +5,10 @@
 }
 
 <div class="text-center">
-    <img src="~/Content/Img/148_img_1.jpg" class="img-fluid" alt="Responsive image">
+    <img src="~/Content/Img/Logo.jpg" style="width:500px;height:200px;" />
 </div>
-<h2>Report</h2>
-<div>@Html.ActionLink("Back to List", "Index")</div>
+
+<div>@Html.ActionLink("Corte de caja ", "Index")</div>
 
 
 <div ng-app="Cash" ng-controller="CashController">
@@ -17,25 +17,28 @@
 
 
     <div class="row">
+        
 
         <div class="col-lg-4">
             <label>Seleccione Fecha</label>
-            <input ng-model="date" type="date" class="form-control" />
+            <input ng-model="date" ng-change="validateButton()"  type="date" class="form-control" />
         </div>
         <div class="col-lg-4">
             <label>Seleccione Agent</label>
-            <select ng-model="usuario" ng-options="item.CUSUARIO as item.CUSUARIO for item in agents" class="form-control"></select>
+            <select ng-model="usuario" ng-change="validateButton()" ng-options="item.CUSUARIO as item.CUSUARIO for item in agents" class="form-control"></select>
         </div>
 
         <div class="col-lg-4">
-            <input type="button" value="Export to Excel" id="btnexport" class="btn btn-danger" ng-click="exportData()" />
-            <input type="submit" value="SHOW" class="btn btn-danger" ng-click="reports(date,usuario)" />
+            <input type="button" value="Export to Excel" id="btnexport" class="btn btn-danger" ng-disabled="isValid" ng-click="exportData()" />
+            <input type="submit" value="SHOW" class="btn btn-danger" ng-disabled="isValid" ng-click="reports(date,usuario)" />
         </div>
 
         <div id="export">
             <div class="row">
                 <div class="col-lg-8">
-                    <table class="table table-condensed table-bordered table-striped">
+                    <hr />
+                    <br />
+                    <table datatable="ng" class="table table-condensed table-bordered table-striped">
                         <thead>
                             <tr>
                                 <th scope="col">Fecha</th>
@@ -48,32 +51,34 @@
 
                             </tr>
                         </thead>
-                        <tr ng-repeat="item in concepts">
-                            <td title="'Fecha' " filter="{ Fecha: 'text'}" sortable="'Fecha'">
-                                {{item.DOC.CFECHA | date : 'dd MMMM yyyy' }}
-                            </td>
-                            <td title="'Concepto'" filter="{ CNOMBRECONCEPTO: 'text'}" sortable="'CNOMBRECONCEPTO'">
-                                {{item.CONCEPT.CNOMBRECONCEPTO}}
-                            </td>
-                            <td title="'Folio'" filter="{ age: 'number'}" sortable="'age'">
-                                {{item.DOC.CFOLIO}}
-                            </td>
-                            <td title="'Agente'" filter="{ age: 'number'}" sortable="'Agente'">
-                                {{item.DOC.CIDAGENTE}}
-                            </td>
-                            <td title="'Razon Social'" filter="{ age: 'number'}" sortable="'age'">
-                                {{item.DOC.CRAZONSOCIAL}}
-                            </td>
+                        <tbody>
 
-                            <td title="'Importe'" filter="{ age: 'number'}" sortable="'age'">
-                                {{item.DOC.CTOTAL}}
-                            </td>
-                            <td title="'ID Proyecto'" filter="{ age: 'number'}" sortable="'age'">
-                                {{item.DOC.CIDPROYECTO}}
-                            </td>
-                        </tr>
+                            <tr ng-repeat="item in concepts">
+                                <td title="'Fecha' " filter="{ Fecha: 'text'}" sortable="'Fecha'">
+                                    {{item.DOC.CFECHA | date : 'dd MMMM yyyy' }}
+                                </td>
+                                <td title="'Concepto'" filter="{ CNOMBRECONCEPTO: 'text'}" sortable="'CNOMBRECONCEPTO'">
+                                    {{item.CONCEPT.CNOMBRECONCEPTO}}
+                                </td>
+                                <td title="'Folio'" filter="{ age: 'number'}" sortable="'age'">
+                                    {{item.DOC.CFOLIO}}
+                                </td>
+                                <td title="'Agente'" filter="{ age: 'number'}" sortable="'Agente'">
+                                    {{item.DOC.CIDAGENTE}}
+                                </td>
+                                <td title="'Razon Social'" filter="{ age: 'number'}" sortable="'age'">
+                                    {{item.DOC.CRAZONSOCIAL}}
+                                </td>
+
+                                <td title="'Importe'" filter="{ age: 'number'}" sortable="'age'">
+                                    {{item.DOC.CTOTAL}}
+                                </td>
+                                <td title="'ID Proyecto'" filter="{ age: 'number'}" sortable="'age'">
+                                    {{item.DOC.CIDPROYECTO}}
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
-
                 </div>
                 <div class="col-lg-4">
                     <table class="table table-condensed table-bordered table-striped">
