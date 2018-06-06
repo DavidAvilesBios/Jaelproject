@@ -33,6 +33,7 @@
     $scope.sumResult2;
     $scope.sumResult3;
     $scope.sumResult4;
+    $scope.sumResult5;
 
     $scope.reports = function (date, usuario) {
         var promise = ajaxService.getData("POST", "/CashCut/BringCatalog", { date: date, usuario: usuario });
@@ -46,6 +47,7 @@
             $scope.sumResult2 = result[3].SUM3;
             $scope.sumResult3 = result[4].SUM4;
             $scope.sumResult4 = result[5].SUM5;
+            $scope.sumResult5 = result[6].SUM6;
             for (var i = 0; $scope.concepts.length > 0; i++) {
                 $scope.concepts[i].DOC.CFECHA = $scope.formatDate($scope.concepts[i].DOC.CFECHA);
             }

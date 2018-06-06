@@ -1,0 +1,148 @@
+﻿@model IEnumerable<CorteCaja.ViewModels.ReportViewModels>
+
+@{
+    ViewBag.Title = "Report";
+}
+
+<div class="text-center">
+    <img src="~/Content/Img/Logo.jpg" style="width:500px;height:200px;" />
+</div>
+
+<div>@Html.ActionLink("Corte de caja ", "Index")</div>
+
+
+<div ng-app="Cash" ng-controller="CashController">
+
+    <input type="hidden" ng-init="bringAgents();" />
+
+
+    <div class="row">
+        
+
+        <div class="col-lg-4">
+            <label>Seleccione Fecha</label>
+            <input ng-model="date" ng-change="validateButton()"  type="date" class="form-control" />
+        </div>
+        <div class="col-lg-4">
+            <label>Seleccione Agent</label>
+            <select ng-model="usuario" ng-change="validateButton()" ng-options="item.CUSUARIO as item.CUSUARIO for item in agents" class="form-control"></select>
+        </div>
+
+        <div class="col-lg-4">
+            <input type="button" value="Export to Excel" id="btnexport" class="btn btn-danger" ng-disabled="isValid" ng-click="exportData()" />
+            <input type="submit" value="SHOW" class="btn btn-danger" ng-disabled="isValid" ng-click="reports(date,usuario)" />
+        </div>
+
+        <div id="export">
+            <div class="row">
+                <div class="col-lg-8">
+                    <hr />
+                    <br />
+                    <table datatable="ng" class="table table-condensed table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Concepto</th>
+                                <th scope="col">Folio</th>
+                                <th scope="col">ID Agente</th>
+                                <th scope="col">Razon social </th>
+                                <th scope="col">Importe</th>
+                                <th scope="col">Id Proyecto</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr ng-repeat="item in concepts">
+                                <td title="'Fecha' " filter="{ Fecha: 'text'}" sortable="'Fecha'">
+                                    {{item.DOC.CFECHA | date : 'dd MMMM yyyy' }}
+                                </td>
+                                <td title="'Concepto'" filter="{ CNOMBRECONCEPTO: 'text'}" sortable="'CNOMBRECONCEPTO'">
+                                    {{item.CONCEPT.CNOMBRECONCEPTO}}
+                                </td>
+                                <td title="'Folio'" filter="{ age: 'number'}" sortable="'age'">
+                                    {{item.DOC.CFOLIO}}
+                                </td>
+                                <td title="'Agente'" filter="{ age: 'number'}" sortable="'Agente'">
+                                    {{item.DOC.CIDAGENTE}}
+                                </td>
+                                <td title="'Razon Social'" filter="{ age: 'number'}" sortable="'age'">
+                                    {{item.DOC.CRAZONSOCIAL}}
+                                </td>
+
+                                <td title="'Importe'" filter="{ age: 'number'}" sortable="'age'">
+                                    {{item.DOC.CTOTAL}}
+                                </td>
+                                <td title="'ID Proyecto'" filter="{ age: 'number'}" sortable="'age'">
+                                    {{item.DOC.CIDPROYECTO}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-4">
+                    <table class="table table-condensed table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Tipo de cuenta</th>
+                                <th scope="col">Suma Total</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Efecivo</td>
+                                <td>{{sumResult}}</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Cheque</td>
+                                <td>{{sumResult1}}</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Transferencia</td>
+                                <td>{{sumResult2}}</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Tarjeta</td>
+                                <td>{{sumResult3}}</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Credito</td>
+                                <td>{{sumResult4}}</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    input[type=button][disabled=disabled] {
+        opacity: 0.65;
+        cursor: not-allowed;
+    }
+
+    table tr th {
+        padding: 10px 30px;
+    }
+
+    table tr td {
+        padding: 10px 30px;
+    }
+</style>
+
+

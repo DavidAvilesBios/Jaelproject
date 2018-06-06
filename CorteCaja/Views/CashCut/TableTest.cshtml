@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "TableTest";
+}
+
+<h2>TableTest</h2>
+
+<div ng-controller="CashController">
+    <table datatable="ng" class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="name in names" ng-click="testingClick(name)">
+                <td>{{name.Name}}</td>
+                <td>{{name.City}}</td>
+                <td>{{name.Country}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

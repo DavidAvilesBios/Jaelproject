@@ -9,6 +9,7 @@
         <EntityTypeShape EntityType="adMarissa_Bios_no_le_pModel.admConcepto" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="adMarissa_Bios_no_le_pModel.admDocumento" Width="1.5" PointX="4.75" PointY="0.75" />
         <EntityTypeShape EntityType="adMarissa_Bios_no_le_pModel.TablaUsuario" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="adMarissa_Bios_no_le_pModel.ClientesExterno" Width="1.5" PointX="7.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

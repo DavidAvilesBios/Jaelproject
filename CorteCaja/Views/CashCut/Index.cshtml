@@ -1,0 +1,248 @@
+﻿@model CorteCaja.ViewModels.CashCutViewModels
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+
+<h2>Inicio </h2>
+<div>@Html.ActionLink("Back to List", "Report")</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div  ng-app="Cash" ng-controller="CashController">
+            <input type="hidden" ng-init="bringAgents();" />
+            <div class="row">
+                <div class="col-lg-4">
+                    <label>Seleccione una fecha {{test}}</label>
+                    <input id="date" type="date" ng-model="fecha" class="form-control">
+                </div>
+
+                <div class="col-lg-4">
+                    <label>Seleccione Agent</label>
+                    <select ng-model="usuario" ng-options="item.CUSUARIO as item.CUSUARIO for item in agents" class="form-control"></select>
+                </div>
+
+                <div class="col-lg-4">
+                    <input type="button" value="Export to Excel" id="btnexport" class="btn btn-danger" ng-click="exportData()" />
+                    <input type="submit" value="SHOW" class="btn btn-danger" ng-click="reports(fecha,usuario)" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="col">
+                        <label>$1000.000</label>
+                        <input ng-change="sumFunction(milPesos,1000);sumAllValues();" type="text" name="MilPesos" ng-model="milPesos" class="form-control" />
+
+                    </div>
+                    <div class="col">
+                        <label>$500.000</label>
+                        <input ng-change="sumFunction(quinientos,500);sumAllValues()" type="text" name="Quinientos" ng-model="quinientos" class="form-control" />
+                    </div>
+                    <div class="col">
+                        <label>$200.000</label>
+                        <input ng-change="sumFunction(doscientos,200);sumAllValues()" type="text" name="Doscientos" ng-model="doscientos" class="form-control" />
+                    </div>
+                    <div class=" col">
+                        <label>$100.000</label>
+                        <input ng-change="sumFunction(cienPesos,100);sumAllValues()" type="text" name="CienPesos" ng-model="cienPesos" class="form-control" />
+                    </div>
+                    <div class="col">
+                        <label>$50.00</label>
+                        <input ng-change="sumFunction(cincuentaPesos,50);sumAllValues()" type="text" name="CincuentaPesos" ng-model="cincuentaPesos" class="form-control" />
+                    </div>
+                    <div class="col">
+                        <label>$20.00</label>
+                        <input ng-change="sumFunction(veinte,20);sumAllValues()" type="text" name="Veinte" ng-model="veinte" class="form-control" />
+                    </div>
+                    <div class="col">
+                        <label>$10.00</label>
+                        <input ng-change="sumFunction(diezPesos,10);sumAllValues()" type="text" name="DiezPesos" ng-model="diezPesos" class="form-control" />
+                    </div>
+                    <div class="col">
+                        <label>$5.00</label>
+                        <input ng-change="sumFunction(cincoPesos,5);sumAllValues()" type="text" name="CincoPesos" ng-model="cincoPesos" class="form-control" />
+                    </div>
+                    <div class="col">
+                        <label>$2.00</label>
+                        <input ng-change="sumFunction(dosPesos,2);sumAllValues()" type="text" name="DosPesos" ng-model="dosPesos" class="form-control" />
+                    </div>
+                    <div class="col">
+                        <label>$1.00</label>
+                        <input ng-change="sumFunction(unPeso,1);sumAllValues()" type="text" name="UnPeso" ng-model="unPeso" class="form-control" />
+                    </div>
+                    <div class="col">
+                        <label>¢50.00</label>
+                        <input ng-change="sumFunction(cincuentaCentavos,.50);sumAllValues()" type="text" name="CincuentaCentavos" ng-model="cincuentaCentavos" class="form-control" />
+                    </div>
+                    <div class="col">
+                        <label>Vales</label>
+                        <input ng-change="sumaVales(vales);sumAllValues()" type="text" name="Vales" ng-model="vales" class="form-control" />
+                    </div>
+                </div>
+               
+                <div class="col-lg-4">
+                    <fieldset disabled="">
+                        <div class="col">
+                            <label>$1000.000</label>
+                            <input type="text" name="MilPesos" ng-model="sumMil" class="form-control" />
+
+                        </div>
+                        <div class="col">
+                            <label>$500.000</label>
+                            <input type="text" name="Quinientos" ng-model="sumQuinientos" class="form-control" />
+                        </div>
+                        <div class="col">
+                            <label>$200.000</label>
+                            <input type="text" name="Doscientos" ng-model="sumDocientos" class="form-control" />
+                        </div>
+                        <div class=" col">
+                            <label>$100.000</label>
+                            <input type="text" name="CienPesos" ng-model="sumCien" class="form-control" />
+                        </div>
+                        <div class="col">
+                            <label>$50.00</label>
+                            <input type="text" name="CincuentaPesos" ng-model="sumCincuenta" class="form-control" />
+                        </div>
+                        <div class="col">
+                            <label>$20.00</label>
+                            <input type="text" name="Veinte" ng-model="sumVeinte" class="form-control" />
+                        </div>
+                        <div class="col">
+                            <label>$10.00</label>
+                            <input type="text" name="DiezPesos" ng-model="sumDiez" ng-disabled=" " class="form-control" />
+                        </div>
+                        <div class="col">
+                            <label>$5.00</label>
+                            <input type="text" name="CincoPesos" ng-model="sumCinco" class="form-control" />
+                        </div>
+                        <div class="col">
+                            <label>$1.00</label>
+                            <input type="text" name="UnPeso" ng-model="sumUno" class="form-control" />
+                        </div>
+                        <div class="col">
+                            <label>$2.00</label>
+                            <input type="text" name="DosPesos" ng-model="sumDos" class="form-control" />
+                        </div>
+                        <div class="col">
+                            <label>¢50.00</label>
+                            <input type="text" name="CincuentaCentavos" ng-model="sumCincuentaCentavos" class="form-control" />
+                        </div>
+                        <div class="col">
+                            <label>Vales</label>
+                            <input type="text" name="Vales" ng-model="sumVales" class="form-control" />
+                    </fieldset>
+                </div>
+                   
+                <div id="export">
+                    <div class="col-lg-4">
+                        <table class="table">
+                            <thead class="table table-condensed table-bordered table-striped">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Cantidades</th>
+                                    <th scope="col">#Billetes</th>
+                                    <th scope="col">Total</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>$1000</td>
+                                    <td>{{milPesos}}</td>
+                                    <td>{{sumMil}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>$500</td>
+                                    <td>{{quinientos}}</td>
+                                    <td>{{sumQuinientos}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>$200</td>
+                                    <td>{{doscientos}}</td>
+                                    <td>{{sumDocientos}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>$100</td>
+                                    <td>{{cienPesos}}</td>
+                                    <td>{{sumCien}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>$50</td>
+                                    <td>{{cincuentaPesos}}</td>
+                                    <td>{{sumCincuenta}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>$20</td>
+                                    <td>{{veinte}}</td>
+                                    <td>{{sumVeinte}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td>$10</td>
+                                    <td>{{diezPesos}}</td>
+                                    <td>{{sumDiez}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8</th>
+                                    <td>$5</td>
+                                    <td>{{cincoPesos}}</td>
+                                    <td>{{sumCinco}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">9</th>
+                                    <td>$2</td>
+                                    <td>{{dosPesos}}</td>
+                                    <td>{{sumDos}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">10</th>
+                                    <td>$1</td>
+                                    <td>{{unPeso}}</td>
+                                    <td>{{sumUno}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">11</th>
+                                    <td>$.50</td>
+                                    <td>{{cincuentaCentavos}}</td>
+                                    <td>{{sumCincuentaCentavos}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">12</th>
+                                    <td>vales</td>
+                                    <td>{{vales}}</td>
+                                    <td>{{vales}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">13</th>
+                                    <td>SumaTotal</td>
+                                    <td>Total:</td>
+                                    <td>{{totalValue}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">14</th>
+                                    <td>TotalEfectivo</td>
+                                    <td>Total:</td>
+                                    <td>{{sumResult}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+
+
+   
+
